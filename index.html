@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <title>Japanese Words</title>
+</head>
+
+<body>
+  <div class="container">
+    <ul>
+      <li>Original: <b id="original_word"></b> <button onclick="hideOrShowElement('original_word', this)" class="button button-clear">Hide</button></li>
+      <li>Spelling: <b id="spelling_romaji"></b> <button onclick="hideOrShowElement('spelling_romaji', this)" class="button button-clear">Hide</button></li>
+      <li>Translation: <b id="eng_translation"></b> <button onclick="hideOrShowElement('eng_translation', this)" class="button button-clear">Hide</button></li>
+    </ul>
+  </div>
+  <div>
+    <button class="button button-clear" onclick="renderRandomWord()">Pick Word</button>
+  </div>
+  <script type="module" src="./index.js"></script>
+  <script>
+    setTimeout(() => {
+      renderRandomWord();
+    }, 500)
+  </script>
+</body>
+
+</html>
